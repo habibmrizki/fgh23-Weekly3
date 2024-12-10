@@ -1,0 +1,382 @@
+:root {
+  --color1: #2948ff;
+  --color2: #ffffff;
+  --color3: #0b132a;
+  --color4: #4f5665;
+  --color5: #e8e8e84d;
+  --color6: #e8e8e8;
+  --color7: #00a700;
+  --color8: #d00000;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  border: none;
+}
+
+/* Reset Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--color2);
+}
+
+.chart-container {
+  width: 600px;
+  margin: 50px auto;
+  background: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.chart-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.chart-controls select {
+  padding: 8px 12px;
+  margin-left: 10px;
+  font-size: 14px;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+}
+
+.chart-label {
+  position: absolute;
+  background: #ff6248;
+  color: white;
+  font-size: 14px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transform: translate(10px, -20px);
+}
+
+.chart-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.chart-scale {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 150px;
+  font-size: 12px;
+  color: #4f5665;
+  text-align: right;
+}
+
+.chart-body {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 150px;
+  border-top: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+  padding: 10px 0;
+  flex-grow: 1;
+}
+
+.chart-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chart-bar {
+  width: 40px;
+  background-color: #2948ff;
+}
+
+.chart-day {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #333;
+}
+
+/* home */
+/* .home {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.features1 {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  gap: 12px;
+}
+
+.features1 > div:nth-child(1) {
+  background-color: var(--color2);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.features1 > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.home > button {
+  background-color: var(--color2);
+  width: 165px;
+  height: 50px;
+  color: var(--color1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ */
+
+/* Bagian Background */
+.background {
+  position: relative;
+  background-color: #2f80ed;
+  padding: 100px 20px;
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Kontainer Utama */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  z-index: 1;
+  position: relative;
+}
+
+/* Bagian Gambar HP */
+.phone {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.phone img {
+  max-width: 300px;
+  height: auto;
+}
+
+/* Bagian Konten Teks */
+.home {
+  flex: 1;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 20px;
+}
+
+.home h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.home p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Fitur-fitur */
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.feature-text h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.feature-text p {
+  font-size: 14px;
+}
+
+/* Tombol */
+.home button {
+  padding: 12px 24px;
+  background-color: white;
+  color: #2f80ed;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+.home button:hover {
+  background-color: #e3e3e3;
+}
+
+.background-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Agar gambar menyesuaikan lebar layar */
+}
+
+.top-image,
+.bottom-image {
+  width: 100%;
+  height: 50vh; /* Mengatur tinggi gambar untuk menempati setengah tinggi layar */
+  background-size: cover;
+  background-position: center;
+}
+
+.top-image {
+  background-image: url(../img/Vector-up.svg);
+}
+
+.bottom-image {
+  background-image: url(../img/Vector-down.svg);
+}
+
+/* Reset Styles */
+/* body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.chart-container {
+  width: 600px;
+  margin: 50px auto;
+  background: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.chart-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.chart-controls select {
+  padding: 8px 12px;
+  margin-left: 10px;
+  font-size: 14px;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+}
+
+.chart-label {
+  position: absolute;
+  background: #ff6248;
+  color: white;
+  font-size: 14px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transform: translate(10px, -20px);
+} */
+
+/* Struktur Grid untuk Diagram */
+/* .chart-content {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+} */
+
+/* Skala Y */
+/* .chart-y-axis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 150px;
+  margin-right: 20px;
+  font-size: 12px;
+  color: #4f5665;
+} */
+
+/* Diagram Batang */
+/* .chart-body {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 150px;
+  width: 100%;
+  border-left: 1px solid #dcdcdc;
+  padding: 10px 0;
+} */
+/* 
+.chart-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chart-bar {
+  width: 40px;
+  background-color: #2948ff;
+}
+
+.chart-day {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #333;
+} */

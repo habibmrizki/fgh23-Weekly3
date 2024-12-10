@@ -1,0 +1,123 @@
+/* Mengatur margin dan padding */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Bagian Background */
+.background-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Menempatkan konten di tengah secara vertikal */
+  width: 100%;
+  height: 100vh; /* Menggunakan seluruh tinggi layar untuk container */
+}
+
+.top-image,
+.bottom-image {
+  width: 100%;
+  height: 50vh; /* Mengatur tinggi gambar untuk menempati setengah tinggi layar */
+  background-size: cover;
+  background-position: center;
+}
+
+.top-image {
+  background-image: url("../img/Vector-up.svg");
+}
+
+.bottom-image {
+  background-image: url("../img/Vector-down.svg");
+}
+
+/* Konten yang ada di atas background */
+.content {
+  position: absolute;
+  display: flex;
+  flex-direction: row; /* Mengubah menjadi row (bersebelahan) */
+  justify-content: center; /* Menempatkan konten di tengah secara horizontal */
+  align-items: center; /* Menempatkan konten di tengah secara vertikal */
+  gap: 20px; /* Menambahkan jarak antar elemen */
+  padding: 20px;
+  color: white;
+  z-index: 2;
+  text-align: left; /* Mengatur teks agar lebih terstruktur */
+}
+
+.phone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px; /* Memberikan sedikit jarak antara gambar dan konten teks */
+}
+
+.phone img {
+  max-width: 100%;
+  margin-top: -160px;
+  height: 550px;
+}
+
+/* Bagian Home */
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%; /* Membuat kolom ini mengisi setengah dari layar */
+}
+
+.home div {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Fitur-fitur */
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.features1 {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.features1 img {
+  width: 48px;
+  height: 48px;
+}
+
+.features1 div {
+  display: flex;
+  flex-direction: column;
+}
+
+.features1 div div:first-child {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.features1 div div:last-child {
+  font-size: 14px;
+}
+
+/* Tombol */
+.home button {
+  padding: 12px 24px;
+  background-color: white;
+  color: #2f80ed;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+.home button:hover {
+  background-color: #e3e3e3;
+}
